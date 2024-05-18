@@ -55,6 +55,9 @@ dependencies:
   equatable: ^2.0.5
   firebase_messaging: ^14.9.1
   dartz: ^0.10.1
+  sign_in_with_apple: ^6.1.0
+  google_sign_in: ^6.2.1
+  firebase_auth: ^4.19.5
 
 dev_dependencies:
   flutter_test:

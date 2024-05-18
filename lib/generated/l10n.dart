@@ -49,6 +49,106 @@ class AppLocalizations {
   static AppLocalizations? maybeOf(BuildContext context) {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
+
+  /// `Sign In`
+  String get signIn {
+    return Intl.message(
+      'Sign In',
+      name: 'signIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message(
+      'Sign Up',
+      name: 'signUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot password`
+  String get forgotPassword {
+    return Intl.message(
+      'Forgot password',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Address`
+  String get emailAddress {
+    return Intl.message(
+      'Email Address',
+      name: 'emailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Re-enter Password`
+  String get reenterPassword {
+    return Intl.message(
+      'Re-enter Password',
+      name: 'reenterPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter Email Address`
+  String get pleaseEnterEmailAddress {
+    return Intl.message(
+      'Please enter Email Address',
+      name: 'pleaseEnterEmailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Enter a valid Email Address`
+  String get pleaseEnterAValidEmailAddress {
+    return Intl.message(
+      'Please Enter a valid Email Address',
+      name: 'pleaseEnterAValidEmailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In Using Email Address`
+  String get signInUsingEmailAddress {
+    return Intl.message(
+      'Sign In Using Email Address',
+      name: 'signInUsingEmailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Other Sign In Methods`
+  String get otherSignInMethods {
+    return Intl.message(
+      'Other Sign In Methods',
+      name: 'otherSignInMethods',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
