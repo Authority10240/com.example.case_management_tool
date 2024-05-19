@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:case_management_tool/generated/l10n.dart';
 import 'package:dio/dio.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'locator.config.dart';
@@ -22,6 +23,8 @@ abstract class RegisterModule{
   Dio get dio => Dio();
 
   AppLocalizations get appLocalizations;
+
+  FirebaseAuth get firebaseAuth => FirebaseAuth.instance;
 
 
 }

@@ -29,14 +29,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Other Sign In Methods"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "pleaseEnterAValidEmailAddress": MessageLookupByLibrary.simpleMessage(
-            "Please Enter a valid Email Address"),
+            "Please enter a valid Email Address"),
         "pleaseEnterEmailAddress":
             MessageLookupByLibrary.simpleMessage("Please enter Email Address"),
+        "pleaseEnterPassword":
+            MessageLookupByLibrary.simpleMessage("Please enter password"),
         "reenterPassword":
             MessageLookupByLibrary.simpleMessage("Re-enter Password"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signInUsingEmailAddress":
             MessageLookupByLibrary.simpleMessage("Sign In Using Email Address"),
+        "signInWithGoogle":
+            MessageLookupByLibrary.simpleMessage("Sign In With Google"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up")
       };
 }

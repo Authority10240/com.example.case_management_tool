@@ -16,7 +16,9 @@ class SignInWithEmailAndPasswordRepositoryImpl extends SignInWithEmailAndPasswor
   @override
   Future<ResultFuture<String>> call({SignInWithEmailAndPasswordRepositoryParams? params}) async {
     try {
-      final result = await authentication.signInWithEmailAddress(email: params!.signInEntity.email, password:  params!.signInEntity.password);
+      final result = await authentication.signInWithEmailAddress(
+          email: params!.signInEntity.email,
+          password:  params!.signInEntity.password);
       return Right(result);
     } on FirebaseAuthException catch(e){
       return Left(ApiFailure(message: e.message!, statusCode:  int.parse(e.code)));

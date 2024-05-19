@@ -13,7 +13,12 @@
           "package_name": "com.example.case_management_tool"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "816152989290-br9po5ji44str6obhdfpamjh6ni9eh0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAHQ8YRtmOzvDuTIZ6ZarzcUZWEM9Bsa-w"
@@ -21,7 +26,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816152989290-br9po5ji44str6obhdfpamjh6ni9eh0j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "816152989290-futhdrh9sc3rj0an1o0d902orbj1ujgp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.caseManagementTool"
+              }
+            }
+          ]
         }
       }
     }

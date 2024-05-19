@@ -14,6 +14,6 @@ abstract class SignInPageEvent extends BaseEvent {}
 
   SignInEmailAndPasswordEvent({required this.signInEntity});
   final SignInEntity signInEntity;
-
-
  }
+
+ class SignInWithGoogleButtonClickedEvent extends SignInPageEvent{}

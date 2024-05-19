@@ -14,3 +14,7 @@ class SignInCustomAuthenticationState extends SignInPageState{
 class SignInEmailAndPasswordState extends SignInPageState{
   SignInEmailAndPasswordState({super.error});
 }
+
+class SignInWithGoogleButtonClickedState extends SignInPageState{
+  SignInWithGoogleButtonClickedState({super.error});
+}

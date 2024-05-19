@@ -120,10 +120,10 @@ class AppLocalizations {
     );
   }
 
-  /// `Please Enter a valid Email Address`
+  /// `Please enter a valid Email Address`
   String get pleaseEnterAValidEmailAddress {
     return Intl.message(
-      'Please Enter a valid Email Address',
+      'Please enter a valid Email Address',
       name: 'pleaseEnterAValidEmailAddress',
       desc: '',
       args: [],
@@ -145,6 +145,26 @@ class AppLocalizations {
     return Intl.message(
       'Other Sign In Methods',
       name: 'otherSignInMethods',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In With Google`
+  String get signInWithGoogle {
+    return Intl.message(
+      'Sign In With Google',
+      name: 'signInWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter password`
+  String get pleaseEnterPassword {
+    return Intl.message(
+      'Please enter password',
+      name: 'pleaseEnterPassword',
       desc: '',
       args: [],
     );

@@ -15,7 +15,9 @@ class SignInWithEmailAndPasswordUseCase extends BaseUseCase<SignInWithEmailAndPa
 
   @override
   Future<ResultFuture<String>> call({SignInWithEmailAndPasswordUseCaseParams? params})async {
-    final ResultFuture<String> result = await signInWithEmailAndPasswordRepository.call();
+    final ResultFuture<String> result = await signInWithEmailAndPasswordRepository.call(
+      params: SignInWithEmailAndPasswordRepositoryParams(signInEntity: params!.signInEntity)
+    );
 
     return result.fold((l) => Left(l), (r) => Right(r));
   }

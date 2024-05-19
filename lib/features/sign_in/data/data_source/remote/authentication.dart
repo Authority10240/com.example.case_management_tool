@@ -10,4 +10,6 @@ abstract class Authentication {
 
   Future<String> signInWithAppleCredentials({required credential });
 
+  Future<String> signInWithGoogleButton();
+
 }

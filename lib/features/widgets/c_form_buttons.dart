@@ -14,7 +14,7 @@ class CFormButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       Container(
-        height: 50,
+        height: 44,
         decoration: BoxDecoration(
           color: AppColorScheme.primary,
           borderRadius: BorderRadius.circular(boarderRadius),

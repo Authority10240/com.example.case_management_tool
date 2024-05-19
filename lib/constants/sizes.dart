@@ -1,1 +1,1 @@
-double boarderRadius = 20;
+double boarderRadius = 8;

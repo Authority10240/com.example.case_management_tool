@@ -6,8 +6,10 @@
   "password": "Password",
   "reenterPassword": "Re-enter Password",
   "pleaseEnterEmailAddress": "Please enter Email Address",
-  "pleaseEnterAValidEmailAddress": "Please Enter a valid Email Address",
+  "pleaseEnterAValidEmailAddress": "Please enter a valid Email Address",
   "signInUsingEmailAddress": "Sign In Using Email Address",
-  "otherSignInMethods": "Other Sign In Methods"
+  "otherSignInMethods": "Other Sign In Methods",
+  "signInWithGoogle": "Sign In With Google",
+  "pleaseEnterPassword": "Please enter password"
 
 }
