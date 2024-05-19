@@ -130,30 +130,30 @@ class AppLocalizations {
     );
   }
 
-  /// `Sign In Using Email Address`
+  /// `Sign in using Email Address`
   String get signInUsingEmailAddress {
     return Intl.message(
-      'Sign In Using Email Address',
+      'Sign in using Email Address',
       name: 'signInUsingEmailAddress',
       desc: '',
       args: [],
     );
   }
 
-  /// `Other Sign In Methods`
+  /// `Other sign in methods`
   String get otherSignInMethods {
     return Intl.message(
-      'Other Sign In Methods',
+      'Other sign in methods',
       name: 'otherSignInMethods',
       desc: '',
       args: [],
     );
   }
 
-  /// `Sign In With Google`
+  /// `Sign in with Google`
   String get signInWithGoogle {
     return Intl.message(
-      'Sign In With Google',
+      'Sign in with Google',
       name: 'signInWithGoogle',
       desc: '',
       args: [],

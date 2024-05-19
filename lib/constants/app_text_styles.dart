@@ -12,4 +12,11 @@ class AppTextStyles{
       fontFamily: 'Roboto'
   );
 
+  static TextStyle buttonTextStyle = const TextStyle(
+      fontSize: 44 * 0.43,
+      letterSpacing: -0.41,
+      color: Colors.white,
+      fontFamily: 'Roboto'
+  );
+
 }

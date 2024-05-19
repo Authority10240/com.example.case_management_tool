@@ -5,6 +5,7 @@ import 'package:case_management_tool/constants/app_primitive_extensions.dart';
 import 'package:case_management_tool/core/base_classes/base_page.dart';
 import 'package:case_management_tool/core/base_classes/base_state.dart';
 import 'package:case_management_tool/core/locator.dart';
+import 'package:case_management_tool/core/navigation/app_router.dart';
 import 'package:case_management_tool/features/sign_in/domain/entities/sign_in_entity.dart';
 import 'package:case_management_tool/features/sign_in/presentation/widgets/sign_in_with_apple_form_button.dart';
 import 'package:case_management_tool/features/sign_in/presentation/widgets/sign_in_with_google_button.dart';
@@ -31,8 +32,8 @@ class SignInPage extends BasePage {
 
 class _SignInPageState extends BasePageState<SignInPage, SignInBloc> {
 
-  TextEditingController _userNameController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _userNameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -52,6 +53,7 @@ class _SignInPageState extends BasePageState<SignInPage, SignInBloc> {
   Widget buildView(BuildContext context) {
     return BlocConsumer<SignInBloc, SignInPageState>(
       listener: (context, state){
+
         //SignInWithGoogleButtonClicked
         if(state is SignInWithGoogleButtonClickedState && state.dataState == DataState.loading){
           cPreloader(context: context);
@@ -66,15 +68,14 @@ class _SignInPageState extends BasePageState<SignInPage, SignInBloc> {
         }
 
         //Sign in with Email and password
-
         if(state is SignInEmailAndPasswordState && state.dataState == DataState.loading){
           cPreloader(context: context);
         }
-
         if(state is SignInEmailAndPasswordState && state.dataState == DataState.success){
-
+          context.router.pushAndPopUntil(
+              const DashboardRoute(),
+              predicate: (Route<dynamic> route) => false);
         }
-
         if(state is SignInEmailAndPasswordState && state.dataState == DataState.error){
 
         }
@@ -92,24 +93,26 @@ class _SignInPageState extends BasePageState<SignInPage, SignInBloc> {
                crossAxisAlignment: CrossAxisAlignment.start,
                children: [
                  30.height,
-                 Center( child: SizedBox(
-                   width: MediaQuery.sizeOf(context).width-50,
-                   height: 250,
+                 Center(
+                   child: SizedBox(
+                   width: MediaQuery.sizeOf(context).width - 50,
+                   height: 100,
                    child: const Placeholder(),
                  ),),
                  20.height,
-                 Divider(),
+                 const Divider(),
                  20.height,
                  Center(
-                   child: CText(title: getLocalization().signInUsingEmailAddress,style:TextStyle() ,),
+                   child: CText(title: getLocalization().signInUsingEmailAddress,style:const TextStyle() ,),
                  ),
                  30.height,
-                 CText(title: getLocalization().emailAddress,style:TextStyle() ,),
-                 20.height,
                 Form(
                   key: _formKey ,
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        CText(title: getLocalization().emailAddress,style:const TextStyle() ,),
+                        20.height,
                         CFormTextField(
                             controller: _userNameController,
                             labelText: getLocalization().emailAddress,
@@ -122,7 +125,7 @@ class _SignInPageState extends BasePageState<SignInPage, SignInBloc> {
                                 return getLocalization().pleaseEnterAValidEmailAddress;
                               }}),
                         20.height,
-                        CText(title: getLocalization().password,style:TextStyle() ,),
+                        CText(title: getLocalization().password,style:const TextStyle() ,),
                         20.height,
                         CFormTextField(
                             controller: _passwordController,
@@ -135,7 +138,7 @@ class _SignInPageState extends BasePageState<SignInPage, SignInBloc> {
 
                         ),
 
-                        50.height,
+                        40.height,
                         CFormButton(isActive: true,
                             onPressed: (){
                               if(_formKey.currentState!.validate()){
@@ -146,12 +149,13 @@ class _SignInPageState extends BasePageState<SignInPage, SignInBloc> {
                               }
                             }, buttonText: getLocalization().signIn),
                       ],
-                    ) ),
+                    )
+                ),
                  20.height,
-                 Divider(),
+                 const Divider(),
                  20.height,
                  Center(
-                   child: CText(title: getLocalization().otherSignInMethods,style:TextStyle() ,),
+                   child: CText(title: getLocalization().otherSignInMethods,style:const TextStyle() ,),
                  ),
                  30.height,
                  SignInWithAppleFormButton(onResponse: (credential){

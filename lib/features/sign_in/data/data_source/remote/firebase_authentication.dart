@@ -26,7 +26,7 @@ class FirebaseAuthentication extends Authentication{
     try {
       final credential = await firebaseAuth.signInWithEmailAndPassword(
           email: email, password: password);
-      return credential.additionalUserInfo!.username!;
+      return "User signed in successfully";
     }catch(ex){
       rethrow;
     }

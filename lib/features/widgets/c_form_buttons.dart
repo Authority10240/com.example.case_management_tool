@@ -4,7 +4,10 @@ import 'package:case_management_tool/core/constants.dart';
 import 'package:flutter/material.dart';
 
 class CFormButton extends StatelessWidget {
-  const CFormButton({required this.isActive,super.key, required this.onPressed, required this.buttonText});
+  const CFormButton({required this.isActive,
+    super.key,
+    required this.onPressed,
+    required this.buttonText});
   final String buttonText;
   final Function onPressed ;
   final bool isActive;
@@ -32,7 +35,7 @@ class CFormButton extends StatelessWidget {
               Text(
                   buttonText,
                   textAlign: TextAlign.center,
-                //  style: AppTextStyles.buttonTextStyle
+                  style: AppTextStyles.buttonTextStyle
               ),
             ),
           ),
@@ -45,7 +48,9 @@ class CFormButton extends StatelessWidget {
 
 class CSecondaryFormButton extends StatelessWidget {
   const CSecondaryFormButton({super.key,
-    required this.isActive, required this.onPressed, required this.buttonText});
+    required this.isActive,
+    required this.onPressed,
+    required this.buttonText});
 
   final bool isActive;
   final Function onPressed;
@@ -61,7 +66,6 @@ class CSecondaryFormButton extends StatelessWidget {
           border: Border.all(color: AppColorScheme.primary)
       ),
       child:TextButton(
-        // group923Pb (101:3723)
         onPressed: isActive? ()=>
             onPressed()
             : null,

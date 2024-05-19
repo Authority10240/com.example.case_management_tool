@@ -26,7 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password"),
         "otherSignInMethods":
-            MessageLookupByLibrary.simpleMessage("Other Sign In Methods"),
+            MessageLookupByLibrary.simpleMessage("Other sign in methods"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "pleaseEnterAValidEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid Email Address"),
@@ -38,9 +38,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Re-enter Password"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signInUsingEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Sign In Using Email Address"),
+            MessageLookupByLibrary.simpleMessage("Sign in using Email Address"),
         "signInWithGoogle":
-            MessageLookupByLibrary.simpleMessage("Sign In With Google"),
+            MessageLookupByLibrary.simpleMessage("Sign in with Google"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up")
       };
 }
